@@ -1,0 +1,16 @@
+<span id="categoryPanel"><input type="text" name="Category" value="{{Category}}" placeholder="Category" id="Category"> -  </span><input type="text" name="nodename" placeholder="Name">
+</p>
+<p>
+<b>Type:</b>
+<select id="SelectNodeType" class="NodeType">
+{{#NodeTypes}}
+<option{{#IsSelected}} selected{{/IsSelected}}>{{NodeType}}</option>
+{{/NodeTypes}}
+</select>
+</p>
+<p>
+<textarea class="Doc" cols=60 placeholder="Description"></textarea>
+</p>
+<p>
+<div class="addNode button green">Add</div>
+</p>

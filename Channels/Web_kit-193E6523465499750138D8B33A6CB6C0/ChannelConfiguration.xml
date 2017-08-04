@@ -1,0 +1,25 @@
+<channel
+   name="Web kit"
+   guid="193E6523465499750138D8B33A6CB6C0"
+   description="Simple example web application implemented with Iguana.  Use as a starting point for building a web application.&#xD;&#xA;&#xD;&#xA;It&apos;s authenticates with Iguana&apos;s built in users."
+   start_automatically="false"
+   logging_level="1"
+   use_message_filter="false">
+   <to_channel>
+   </to_channel>
+   <from_http
+      type="mapper"
+      guid="Release-FromHTTP-hziw453xios2vm"
+      commit_id="ad94dd4d981a53326c551e7ee4caa94f753cd972"
+      commit_comment="Put in start screen."
+      mapper_url_path="deploy/"/>
+   <message_filter
+      filter_after_logging="false"
+      log_pre_post_filter_message="true"
+      filter_vmd_path=""
+      transformation_mode="0"
+      scripted_transformation_configuration_name="default"
+      error_handling="0"
+      use_translator_filter="true">
+   </message_filter>
+</channel>

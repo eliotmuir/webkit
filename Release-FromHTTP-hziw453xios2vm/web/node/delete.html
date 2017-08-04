@@ -1,0 +1,33 @@
+<h1>Delete {{#Category}}{{Category}} - {{/Category}}{{NodeName}}</h1>
+
+{{#HasDependencies}}
+<p>
+This is used as a member by the following objects. After deletion they will have this removed from their list of members.
+</p>
+{{/HasDependencies}}
+{{^HasDependencies}}
+<p>
+This object is not referenced by any other objects.   
+</p>
+{{/HasDependencies}}
+
+
+{{#Dependencies}}
+ <a href="#node?ApiId={{ApiId}}&Category={{Category}}&Name={{Name}}&NodeType={{NodeType}}">{{#Category}}{{Category}} - {{/Category}}{{Name}}</a> 
+
+{{/Dependencies}}
+
+<div class="actions">
+<a href="#node?ApiId={{ApiId}}&Name={{NodeName}}&NodeType={{NodeType}}{{#Category}}&Category={{Category}}{{/Category}}" class="button grey"><div class="cancel">Cancel</div></a>
+</div>
+
+<div class="deleteNode" NodeName="{{NodeName}}" Category="{{Category}}" NodeType="{{NodeType}}">
+   <svg width="12px" height="16px" viewBox="0 0 12 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+       <desc>Icon-Delete</desc>
+       <defs></defs>
+       <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+           <path d="M7.74975,0 L4.25,0 C3.974,0 3.75,0.225 3.75,0.5 L3.75,2 L0.5,2 C0.224,2 0,2.225 0,2.5 C0,2.7775 0.224,3 0.5,3 L1,3 L1,15.5 C1,15.7775 1.224,16 1.5,16 L10.49975,16 C10.77625,16 10.99975,15.7775 10.99975,15.5 L10.99975,3 L11.49975,3 C11.77625,3 11.99975,2.7775 11.99975,2.5 C11.99975,2.225 11.77625,2 11.49975,2 L8.24975,2 L8.24975,0.5 C8.24975,0.225 8.02625,0 7.74975,0 L7.74975,0 Z M9.99975,3 L9.99975,15 L2,15 L2,3 L9.99975,3 L9.99975,3 Z M7.49975,14 C7.77625,14 7.99975,13.7775 7.99975,13.5 L7.99975,5 C7.99975,4.725 7.77625,4.5 7.49975,4.5 C7.224,4.5 6.99975,4.725 6.99975,5 L6.99975,13.5 C6.99975,13.7775 7.224,14 7.49975,14 L7.49975,14 Z M4.49975,14 C4.77625,14 5,13.7775 5,13.5 L5,5 C5,4.725 4.77625,4.5 4.49975,4.5 C4.224,4.5 4,4.725 4,5 L4,13.5 C4,13.7775 4.224,14 4.49975,14 L4.49975,14 Z M4.75,2 L4.75,1 L7.24975,1 L7.24975,2 L4.75,2 L4.75,2 Z" id="126" fill="#E74C3C"></path>
+       </g>
+   </svg>
+   Confirm Deletion
+</div>

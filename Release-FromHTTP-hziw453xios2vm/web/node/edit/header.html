@@ -1,0 +1,14 @@
+<form>
+	{{#IsResponse}}
+   {{#Category}}<input id="Category" value="{{Category}}" readonly> - {{/Category}} 
+   <input type='text' value={{Name}} id="Name" class="form-category" readonly> (Response)
+   {{/IsResponse}}
+   {{^IsResponse}}
+   {{#Category}}<input id="Category" placeholder="Enter Category" value="{{Category}}"> - {{/Category}} 
+   <input type='text' value={{Name}} placeholder="Enter Name" id="Name" class="form-category">
+   {{/IsResponse}}
+   <!--Type: {{NodeType}}-->
+   <p>
+      <textarea id="Doc" class="form-category-desc" placeholder="Enter Description" width=120>{{Doc}}</textarea>
+   </p>
+   <div id="sortable" class="memberTable">

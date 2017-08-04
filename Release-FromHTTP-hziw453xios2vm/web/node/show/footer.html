@@ -1,0 +1,23 @@
+{{#HasResponse}}
+<hr>
+<h1>Responds With</h1>
+<p>
+{{ResponseDoc}}
+</p>
+{{{ResponseHtml}}}
+{{/HasResponse}}
+
+
+{{#HasDepends}}
+<hr>
+<b><span class="showDependencies"></span>Dependencies</b>
+<div class="dependencies" style="display : none">
+{{/HasDepends}}
+{{#Dependencies}}
+<p><a href="#node?ApiId={{ApiId}}&Name={{Name}}&NodeType={{NodeType}}&Category={{Category}}">
+<span>{{#Category}}{{Category}} - {{/Category}}{{Name}}</span></a></p> 
+{{/Dependencies}}
+{{#HasDependencies}}
+
+</div>
+{{/HasDependencies}}

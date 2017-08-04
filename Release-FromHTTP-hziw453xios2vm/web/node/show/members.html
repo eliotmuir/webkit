@@ -1,0 +1,22 @@
+{{#Members}}
+<div>
+{{#IsComplex}}
+<span membername="{{MemberName}}" typename="{{TypeName}}" nodetype="{{NodeType}}" target="{{Target}}" class="expandSubType">[+]</span>
+{{/IsComplex}}
+{{^IsComplex}}<span class="noExpand">&nbsp;</span>{{/IsComplex}}
+
+<b>{{MemberName}}</b> - 
+{{#IsComplex}}<a href="#node?ApiId={{ApiId}}&Name={{TypeName}}&NodeType={{NodeType}}">{{/IsComplex}}{{TypeName}}{{#IsComplex}}</a>{{/IsComplex}}
+{{#Rating}}&nbsp;<span class="rating">{{Rating}}</span>{{/Rating}} {{#IsArray}}<span class="array">array</span>{{/IsArray}}
+<div class="memberDoc">
+{{{Doc}}}   
+</div>
+</div>
+
+{{#IsComplex}}
+<div class="detailDiv" style="display : none"></div>
+{{/IsComplex}}
+{{/Members}}
+{{^Members}}
+There are no members for this object.
+{{/Members}}
